@@ -5,7 +5,7 @@
 import { useState } from "react";
 import StatCard from "../components/statcard";
 import ProjectCard from "@/app/components/projectcards";
-import { projectdata as initialProjects } from "@/app/data/dashboards";
+// import { projectdata as initialProjects } from "@/app/data/dashboards";
 
 import {
   Activity,
@@ -17,20 +17,26 @@ import {
   X,
 } from "lucide-react";
 
-type ProjectStatus =
-  | "On Track"
-  | "In Progress"
-  | "Delayed"
-  | "Completed";
+// type ProjectStatus =
+//   | "On Track"
+//   | "In Progress"
+//   | "Delayed"
+//   | "Completed";
 
-type Project = {
-  id: string;
-  name: string;
-  type: string;
-  progress: number;
-  status: ProjectStatus;
-  color: string;
-};
+// type Project = {
+//   id: string;
+//   name: string;
+//   type: string;
+//   progress: number;
+//   status: ProjectStatus;
+//   color: string;
+// };
+import {
+  projectdata as initialProjects,
+  type Project,
+  type ProjectStatus,
+} from "@/app/data/dashboards";
+
 
 export default function ProjectsPage() {
   const [projects, setProjects] =
@@ -71,19 +77,19 @@ export default function ProjectsPage() {
       return;
     }
 
-    const newProject: Project = {
-      id: Date.now().toString(),
-      name: formData.name,
-      type: formData.type,
-      progress: formData.progress,
-      status: formData.status,
-      color: formData.color,
-    };
+    // const newProject: Project = {
+    //   id: Date.now().toString(),
+    //   name: formData.name,
+    //   type: formData.type,
+    //   progress: formData.progress,
+    //   status: formData.status,
+    //   color: formData.color,
+    // };
 
-    setProjects((current) => [
-      newProject,
-      ...current,
-    ]);
+    // setProjects((current) => [
+    //   newProject,
+    //   ...current,
+    // ]);
 
     setFormData({
       name: "",

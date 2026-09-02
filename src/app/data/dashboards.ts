@@ -56,8 +56,26 @@
 //     status: "New Task",
 //   },
 // ];
+export type ProjectStatus =
+  | "On Track"
+  | "In Progress"
+  | "Delayed"
+  | "Completed";
 
-export const projectdata = [
+export type Project = {
+  id: string;
+  name: string;
+  type: string;
+  progress: number;
+  status: ProjectStatus;
+  color: string;
+  description: string;
+  startDate: string;
+  dueDate: string;
+  team: number;
+};
+
+export const projectdata: Project[] = [
   {
     id: "project-1",
     name: "Website Redesign",
